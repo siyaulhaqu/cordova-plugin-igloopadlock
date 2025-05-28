@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cordova-plugin-igloopadlock" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cordova-plugin-igloopadlock" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>IglooPadlock</name>
   <description>Cordova plugin for Igloo Padlock BLE control</description>
   <license>MIT</license>
@@ -13,7 +13,7 @@
       <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     </config-file>
 
-    <framework src="src/android/ble-sdk-release.aar" custom="true" type="aar"/>
+    <source-file src="libs/ble-sdk-release.aar" target-dir="libs"/>
     <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock"/>
   </platform>
 
