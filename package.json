@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-igloopadlock",
+  "version": "1.0.0",
+  "description": "Cordova plugin for Igloo BLE padlocks",
+  "cordova": {
+    "id": "cordova-plugin-igloopadlock",
+    "platforms": ["android"]
+  },
+  "keywords": ["cordova", "plugin", "igloo", "bluetooth", "ble"],
+  "author": "Siya",
+  "license": "MIT"
+}

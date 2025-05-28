@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-igloopadlock" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>IglooPadlock</name>
+  <description>Cordova plugin for Igloo Padlock BLE control</description>
+  <license>MIT</license>
+
+  <platform name="android">
+    <config-file parent="/*" target="AndroidManifest.xml">
+      <uses-permission android:name="android.permission.BLUETOOTH" />
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+      <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    </config-file>
+
+    <framework src="src/android/ble-sdk-release.aar" custom="true" type="aar"/>
+    <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock"/>
+  </platform>
+
+  <js-module src="www/igloo.js" name="IglooPlugin">
+    <clobbers target="cordova.plugins.igloo"/>
+  </js-module>
+</plugin>
