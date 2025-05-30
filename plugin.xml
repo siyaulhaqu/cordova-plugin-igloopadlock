@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="cordova-plugin-igloopadlock" version="1.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+<plugin id="cordova-plugin-igloopadlock" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0">
   <name>IglooPadlock</name>
   <description>Cordova plugin for Igloo Padlock BLE control</description>
   <license>MIT</license>
 
   <platform name="android">
-    <framework src="gradle.properties" custom="true" type="gradleProperties" />
-    <preference name="GradlePluginKotlinVersion" value="1.6.10" />
-    <framework src="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.10" />
-
+    <!-- Required permissions -->
     <config-file parent="/*" target="AndroidManifest.xml">
       <uses-permission android:name="android.permission.BLUETOOTH" />
       <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -17,12 +14,23 @@
       <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     </config-file>
 
-    <source-file src="libs/ble-sdk-release.aar" target-dir="libs"/>
-    <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock"/>
+    <!-- BLE SDK AAR -->
+    <source-file src="libs/ble-sdk-release.aar" target-dir="libs" />
+
+    <!-- Kotlin stdlib included manually -->
+    <source-file src="libs/kotlin-stdlib-jdk7-1.6.10.jar" target-dir="libs" />
+
+    <!-- Java implementation -->
+    <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock" />
+
+    <!-- Gradle properties file for Kotlin + AndroidX -->
+    <framework src="gradle.properties" custom="true" type="gradleProperties" />
   </platform>
 
+  <!-- Hook to add packagingOptions for native libs -->
   <hook type="after_plugin_install" src="scripts/add-packaging-options.js" />
 
+  <!-- JavaScript bridge -->
   <js-module src="www/igloo.js" name="IglooPlugin">
     <clobbers target="cordova.plugins.igloo"/>
   </js-module>
