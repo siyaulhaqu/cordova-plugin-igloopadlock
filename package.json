@@ -1,0 +1,8 @@
+{
+  "name": "cordova-plugin-igloopadlock",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-igloopadlock",
+    "platforms": ["android"]
+  }
+}
