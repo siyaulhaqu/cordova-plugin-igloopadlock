@@ -18,7 +18,13 @@
     <source-file src="libs/ble-sdk-release.aar" target-dir="libs" />
 
     <!-- Kotlin stdlib included manually -->
+    <source-file src="libs/kotlin-stdlib-1.6.10.jar" target-dir="libs" />
+    <source-file src="libs/kotlin-stdlib-common-1.6.10.jar" target-dir="libs" />
     <source-file src="libs/kotlin-stdlib-jdk7-1.6.10.jar" target-dir="libs" />
+    <source-file src="libs/kotlin-stdlib-jdk8-1.6.10.jar" target-dir="libs" />
+    <source-file src="libs/annotations-13.0.jar" target-dir="libs" />
+    <!-- If needed -->
+    <source-file src="libs/kotlin-reflect-1.6.10.jar" target-dir="libs" />
 
     <!-- Java implementation -->
     <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock" />
