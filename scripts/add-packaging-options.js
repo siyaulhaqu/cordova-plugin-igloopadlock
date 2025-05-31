@@ -22,10 +22,6 @@ module.exports = function (context) {
         pickFirst 'lib/x86/libble-sdk.so'
         pickFirst 'lib/arm64-v8a/libble-sdk.so'
         pickFirst 'lib/x86_64/libble-sdk.so'
-        pickFirst 'META-INF/kotlin-stdlib.kotlin_module'
-        pickFirst 'META-INF/kotlin-stdlib-common.kotlin_module'
-        pickFirst 'META-INF/kotlin-stdlib-jdk7.kotlin_module'
-        pickFirst 'META-INF/annotations.kotlin_module'
     }`;
 
     var androidIndex = buildGradle.indexOf("android {");
