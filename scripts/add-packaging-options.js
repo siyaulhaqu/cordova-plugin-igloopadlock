@@ -25,7 +25,6 @@ module.exports = function (context) {
         pickFirst 'META-INF/kotlin-stdlib.kotlin_module'
         pickFirst 'META-INF/kotlin-stdlib-common.kotlin_module'
         pickFirst 'META-INF/kotlin-stdlib-jdk7.kotlin_module'
-        pickFirst 'META-INF/kotlin-stdlib-jdk8.kotlin_module'
         pickFirst 'META-INF/annotations.kotlin_module'
     }`;
 
