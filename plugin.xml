@@ -21,7 +21,7 @@
     <source-file src="src/android/IglooPlugin.java" target-dir="src/com/igloo/padlock" />
 
     <!-- Gradle properties file for Kotlin + AndroidX -->
-    <framework src="gradle.properties" custom="true" type="gradleProperties" />
+    <resource-file src="gradle.properties" target="app/gradle.properties" />
   </platform>
 
   <!-- Hook to add packagingOptions for native libs -->
